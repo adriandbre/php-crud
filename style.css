@@ -1,0 +1,259 @@
+/*----Global----*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #252422;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================== Navbar ================== */
+.navbar_container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.navbar_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        font-size: 1.4rem;
+    }
+}
+
+.logo a {
+    color: #111111;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo a:hover {
+    color: #f7c679;
+}
+
+.logo i {
+    color: #f5bf69;
+}
+
+/* Add Expense Button */
+.createData {
+    background-color: #252422;
+    color: #f1faee;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.createData:hover {
+    background-color: #457b9d;
+}
+
+
+
+/* ================== Total ================== */
+.total_container {
+    background-color: #252422;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+}
+
+.total {
+    color: #ffffff;
+    width: 90%;
+    max-width: 1200px;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .total {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* ================== Table ================== */
+.bigLebowski {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.table {
+    width: 90%;
+    max-width: 1200px;
+    text-align: left;
+    border-spacing: 0 1rem;
+}
+
+table thead {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ccc5b9;
+    color: #252422;
+}
+
+th {
+    padding-left: 0.5rem;
+    border-bottom: 1px solid #252422;
+}
+
+td {
+    height: 3rem;
+    padding-left: 0.5rem;
+}
+
+.btnEdit i {
+    color: #52b69a;
+    margin-right: 1rem;
+}
+
+.btnDelete i {
+    color: #DB504A;
+}
+
+
+
+/* ================== PopUp ================== */
+.popUp {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: 80% 5%;
+}
+
+.show {
+    transform: scale(1);
+}
+
+.popCard {
+    background-color: #0F0F0F;
+    color: #f5f5f5;
+    position: relative;
+    padding: 2rem 1.5rem;
+    border-radius: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    padding: 0 0 0.5rem 0.5rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+.btn {
+    background-color: #ffffff;
+    width: 100%;
+    height: 35px;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #52b69a;
+    color: #ffffff;
+}
+
+.btnUpdate {
+    background-color: #ffffff;
+}
+
+.closePop {
+    background-color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.closePop:hover {
+    background-color: #DB504A;
+    color: #252422;
+}
+
+@media (min-width: 768px) {
+    .popUp {
+        transform-origin: 90% 3%;
+    }
+
+    .popCard {
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .popUp {
+        transform-origin: 80% 1.7rem;
+    }
+
+    .popCard {
+        padding: 3rem 2.5rem;
+    }
+
+    .form-group input {
+        font-size: 1.45rem;
+    }
+}
